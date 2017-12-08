@@ -1,0 +1,5 @@
+---
+- name: Execute hardening role
+  hosts: all
+  roles:
+          - { role: dev-sec.os-hardening }
