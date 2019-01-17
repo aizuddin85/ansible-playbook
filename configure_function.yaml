@@ -1,0 +1,5 @@
+---
+- name: Configuring server based on role
+  hosts: all
+  roles:
+          - { role: web-server  }

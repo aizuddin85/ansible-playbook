@@ -1,0 +1,24 @@
+---
+# tasks file for web-server
+- name: Configuring webserver
+  block:
+  - yum:
+      name: "{{ package }}"
+      state: latest
+
+  - template:
+      src: index.html.j2
+      dest: /var/www/html/index.html
+
+  - firewalld:
+      permanent: yes
+      state: enabled
+      service: http
+      immediate: true
+
+  - service:
+      name: "{{ package }}"
+      state: started
+      enabled: yes
+
+  when: webserver
