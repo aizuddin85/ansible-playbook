@@ -1,0 +1,12 @@
+---
+- name: cleanup webserver
+  hosts: minions
+  tasks:
+  - name: removing package
+    yum:
+      name: httpd
+      state: absent
+  - name: clean up old files
+    file:
+      path: /var/www/html/index.html
+      state: absent
