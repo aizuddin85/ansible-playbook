@@ -1,6 +1,6 @@
 ---
 - name: cleanup webserver
-  hosts: minions
+  hosts: all
   tasks:
   - name: removing package
     yum:
