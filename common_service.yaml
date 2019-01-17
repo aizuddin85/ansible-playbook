@@ -1,0 +1,6 @@
+---
+- name: Configuring server with common settings
+  hosts: all
+  roles:
+          - { role: ntp }
+          - { role: common_pkgs }

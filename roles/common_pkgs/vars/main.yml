@@ -1,0 +1,5 @@
+---
+# vars file for common_pkgs
+common_pkgs:
+        - finger
+        - vim

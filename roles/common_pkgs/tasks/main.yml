@@ -1,0 +1,7 @@
+---
+# tasks file for common_pkgs
+- name: Install common packages
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ common_pkgs }}"
