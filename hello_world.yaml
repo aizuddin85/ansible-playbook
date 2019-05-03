@@ -3,6 +3,10 @@
   hosts: all
  
   tasks:
- 
+  - name: pause
+    pause:
+      prompt: "Continue?"
+      echo: no
+      minutes: 1
   - name: Hello World!
     shell: echo "Hi! Tower is working."
